@@ -28,3 +28,34 @@
   content: "";
   padding: 0;
 }
+
+.timer {
+  width: 100%;
+  text-align: center;
+  font-size: 6em;
+  padding-top: 2em;
+}
+
+.timerBtns {
+  width: 100%;
+  text-align: center;
+}
+
+.timerBtn {
+  float: none;
+  color: white;
+  padding: 20px 40px;
+  font-size: 1.2em;
+  border: 1px solid #fff;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+body {
+  background-image: url(http://tuesdayknightgames.com/images/herotworooms.jpg);
+  background-color: #5A0003;
+  background-position: center -22%;
+  background-repeat: no-repeat;
+  font-family: 'Rambla', sans-serif;
+  color: white;
+}
