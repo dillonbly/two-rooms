@@ -29,11 +29,17 @@
   padding: 0;
 }
 
+.message {
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  padding-top: 5em;
+}
+
 .timer {
   width: 100%;
   text-align: center;
-  font-size: 6em;
-  padding-top: 2em;
+  font-size: 5em;
 }
 
 .timerBtns {
@@ -46,16 +52,21 @@
   color: white;
   padding: 20px 40px;
   font-size: 1.2em;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   font-weight: bold;
   border-radius: 5px;
+  background-color: rgba(0,0,0,0);
 }
 
 body {
   background-image: url(http://tuesdayknightgames.com/images/herotworooms.jpg);
   background-color: #5A0003;
-  background-position: center -22%;
+  background-position: center 0%;
   background-repeat: no-repeat;
   font-family: 'Rambla', sans-serif;
+  color: white;
+}
+
+a {
   color: white;
 }

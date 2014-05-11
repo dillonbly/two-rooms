@@ -1,1 +1,16 @@
-<p>This is the partial for view 1.</p>
+<form class="settings>
+  <label for="numberRounds">Number of Rounds:</label>
+  <input type="number" min="1" max="9" ng-model="game.numberOfRounds"
+     ng-change="updateRoundCount()" id="numberRounds">
+  <div ng-repeat="round in game.rounds">
+    <span>Round {{$index}}</span>
+    <label for="round{{$index}}minutes">Minutes:</label>
+    <input type="number" ng-model="round.minutes" id="round{{$index}}minutes"
+        min="1" max="99">
+    <label for="round{{$index}}hostages">Hostages:</label>
+    <input type="number" ng-model="round.hostages" id="round{{$index}}hostages"
+        min="0" max="99">
+  </div>
+  <button ng-click="saveSettings()">Save</button>
+</form>
+

@@ -3,13 +3,37 @@
 /* Controllers */
 
 angular.module('myApp.controllers', [])
-  .controller('SettingsCtrl', ['$scope', function($scope) {
-
+  .controller('SettingsCtrl', ['$scope', 'GameState', function($scope, GameState) {
+    var defaultRound = {minutes:1, hostages:1};
+    $scope.game = angular.copy(GameState.getState());
+    $scope.updateRoundCount = function() {
+      $scope.game.rounds = $scope.game.rounds.slice(0, $scope.game.numberOfRounds);
+      for (var i = $scope.game.rounds.length; i < $scope.game.numberOfRounds; i++) {
+        $scope.game.rounds[i] = angular.copy(defaultRound);
+      }
+    };
+    $scope.saveSettings = function() {
+      GameState.updateState($scope.game);
+    };
   }])
-  .controller('TimerCtrl', ['$scope', '$interval', function($scope, $interval) {
+  .controller('TimerCtrl', ['$scope', '$interval', 'GameState',
+      function($scope, $interval, GameState) {
+
+    var game = GameState.getState();
+    $scope.round = 0;
+
+    var updateRound = function() {
+      $scope.timeRemaining = game.rounds[$scope.round].minutes;
+      $scope.message = "Round " + ($scope.round + 1) +
+          ". Exchange " + game.rounds[$scope.round].hostages + " hostage.";
+    };
+    updateRound();
 
     var timesUp = function() {
-      $scope.message = "Times up!"
+      $scope.timeRemaining.seconds = 0;
+      $scope.message = "End of round " + ($scope.round + 1) +
+          ". Exchange " + game.rounds[$scope.round].hostages + " hostage.";
+      $scope.pause();
     };
     var stop;
 

@@ -1,9 +1,9 @@
 <div>
-  <span>{{message}}</span>
+  <div class="message">{{message}}</div>
   <div class="timer">{{timeRemaining.minutes}}:{{timeRemaining.seconds | numberFixedLen:2}}</div>
   <div class="timerBtns">
-    <button type="button" ng-click="start()" ng-hide="started">Start</button>
-    <button type="button" ng-click="pause()" ng-show="started">Pause</button>
-    <button type="button" ng-click="reset()">Reset</button>
+    <button type="button" class="timerBtn" ng-click="start()" ng-hide="started">Start</button>
+    <button type="button" class="timerBtn" ng-click="pause()" ng-show="started">Pause</button>
+    <button type="button" class="timerBtn" ng-click="reset()">Reset</button>
   </div>
 </div>
