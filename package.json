@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "two-rooms",
   "private": true,
-  "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "version": "0.1.0",
+  "description": "A timer for Two Rooms and a Boom",
+  "repository": "https://github.com/dillonbly/two-rooms",
   "license": "MIT",
   "devDependencies": {
     "karma": "~0.10",
