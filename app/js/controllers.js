@@ -42,7 +42,9 @@ angular.module('myApp.controllers', [])
     updateRound();
 
     var timesUp = function() {
-      document.getElementById("bomb").play();
+      var bomb = document.getElementById("bomb");
+      bomb.load();
+      bomb.play();
       $scope.timeRemaining.seconds = 0;
       $scope.pause();
       $scope.roundOver = true;
@@ -63,7 +65,9 @@ angular.module('myApp.controllers', [])
     $scope.start = function() {
       $scope.started = true;
       stop = $interval(countDown, 1000);
-      document.getElementById("ticktock").play();
+      var ticktock = document.getElementById("ticktock");
+      ticktock.load();
+      ticktock.play();
     };
     $scope.prev = function() {
       $scope.roundIndex -= 1;
