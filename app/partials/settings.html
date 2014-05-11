@@ -2,15 +2,20 @@
   <label for="numberRounds">Number of Rounds:</label>
   <input type="number" min="1" max="9" ng-model="game.numberOfRounds"
      ng-change="updateRoundCount()" id="numberRounds">
-  <div ng-repeat="round in game.rounds">
-    <span>Round {{$index}}</span>
-    <label for="round{{$index}}minutes">Minutes:</label>
-    <input type="number" ng-model="round.minutes" id="round{{$index}}minutes"
-        min="1" max="99">
-    <label for="round{{$index}}hostages">Hostages:</label>
-    <input type="number" ng-model="round.hostages" id="round{{$index}}hostages"
-        min="0" max="99">
-  </div>
+  <fieldset ng-repeat="round in game.rounds">
+    <legend>Round {{$index + 1}}</legend>
+    <table><tr>
+    <td><label for="round{{$index}}minutes">Minutes:</label></td>
+    <td><input type="number" ng-model="round.minutes" id="round{{$index}}minutes"
+        min="1" max="99"></td>
+    </tr>
+    <tr>
+    <td><label for="round{{$index}}hostages">Hostages:</label></td>
+    <td><input type="number" ng-model="round.hostages" id="round{{$index}}hostages"
+        min="0" max="99"></td>
+    </tr>
+    </table>
+  </fieldset>
   <button ng-click="saveSettings()">Save</button>
 </form>
 

@@ -20,22 +20,33 @@ angular.module('myApp.controllers', [])
       function($scope, $interval, GameState) {
 
     var game = GameState.getState();
-    $scope.round = 0;
+    $scope.numberOfRounds = game.numberOfRounds;
+    $scope.roundIndex = 0;
 
+    var stop;
+    $scope.pause = function() {
+      $scope.started = false;
+      if (stop) {
+        $interval.cancel(stop);
+      }
+    };
+    $scope.reset = function() {
+      $scope.timeRemaining = {minutes: $scope.round.minutes, seconds: 0};
+      $scope.pause();
+      $scope.roundOver = false;
+    };
     var updateRound = function() {
-      $scope.timeRemaining = game.rounds[$scope.round].minutes;
-      $scope.message = "Round " + ($scope.round + 1) +
-          ". Exchange " + game.rounds[$scope.round].hostages + " hostage.";
+      $scope.round = game.rounds[$scope.roundIndex];
+      $scope.reset();
     };
     updateRound();
 
     var timesUp = function() {
+      document.getElementById("bomb").play();
       $scope.timeRemaining.seconds = 0;
-      $scope.message = "End of round " + ($scope.round + 1) +
-          ". Exchange " + game.rounds[$scope.round].hostages + " hostage.";
       $scope.pause();
+      $scope.roundOver = true;
     };
-    var stop;
 
     var countDown = function() {
       $scope.timeRemaining.seconds -= 1;
@@ -52,19 +63,16 @@ angular.module('myApp.controllers', [])
     $scope.start = function() {
       $scope.started = true;
       stop = $interval(countDown, 1000);
+      document.getElementById("ticktock").play();
     };
-    $scope.pause = function() {
-      $scope.started = false;
-      if (stop) {
-        $interval.cancel(stop);
-      }
+    $scope.prev = function() {
+      $scope.roundIndex -= 1;
+      updateRound();
     };
-    $scope.reset = function() {
-      $scope.timeRemaining = {minutes: 2, seconds: 0};
-      $scope.pause();
+    $scope.next = function() {
+      $scope.roundIndex += 1;
+      updateRound();
     };
-
-    $scope.reset();
     
   }])
   .controller('MenuCtrl', ['$scope', function($scope) {

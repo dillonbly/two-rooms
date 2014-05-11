@@ -6,8 +6,9 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
-  <meta name="description" content="">
+  <title>Two Rooms and a Boom!</title>
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <meta name="description" content="Timer application for Two Rooms and a Boom!">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
@@ -16,9 +17,10 @@
 </head>
 <body>
   <ul class="menu">
-    <li><a href="#/menu">New Game</a></li>
+    <!--<li><a href="#/menu">New Game</a></li>-->
     <li><a href="#/settings">Settings</a></li>
     <li><a href="#/timer">Timer</a></li>
+    <li><a href="http://tuesdayknightgames.com/tworoomsandaboom/" target="_blank">Two Rooms and a Boom</a></li>
   </ul>
 
   <!--[if lt IE 7]>
@@ -37,5 +39,7 @@
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/directives.js"></script>
+  <audio src="sound/ticktock.mp3" id="ticktock"></audio>
+  <audio src="sound/bomb.mp3" id="bomb"></audio>
 </body>
 </html>

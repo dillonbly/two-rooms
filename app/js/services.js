@@ -17,7 +17,7 @@ angular.module('myApp.services', [])
     };
 
     this.updateState = function(newState) {
-      game = newState;
+      this.game = newState;
     };
     this.getState = function() {
       return this.game;

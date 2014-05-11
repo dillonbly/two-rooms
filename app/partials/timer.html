@@ -1,9 +1,15 @@
 <div>
-  <div class="message">{{message}}</div>
+  <div class="padTimer"> </div>
+  <div class="message">Round {{roundIndex + 1}}. Exchange {{round.hostages}} hostage<span ng-hide="round.hostages == 1">s</span>.
   <div class="timer">{{timeRemaining.minutes}}:{{timeRemaining.seconds | numberFixedLen:2}}</div>
   <div class="timerBtns">
-    <button type="button" class="timerBtn" ng-click="start()" ng-hide="started">Start</button>
+    <button type="button" class="timerBtn" ng-click="prev()"
+        ng-disabled="roundIndex == 0">Previous</button>
+    <button type="button" class="timerBtn" ng-click="start()"
+        ng-hide="started" ng-disabled="roundOver">Start</button>
     <button type="button" class="timerBtn" ng-click="pause()" ng-show="started">Pause</button>
     <button type="button" class="timerBtn" ng-click="reset()">Reset</button>
+    <button type="button" class="timerBtn" ng-click="next()"
+        ng-disabled="roundIndex == numberOfRounds - 1">Next</button>
   </div>
 </div>
