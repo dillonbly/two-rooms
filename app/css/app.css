@@ -5,6 +5,8 @@
   border-bottom: 0.1em solid black;
   margin-bottom: 2em;
   padding: 0 0 0.5em;
+  text-align: center;
+  font-size: 1.5em;
 }
 
 .menu:before {
@@ -30,7 +32,7 @@
 }
 
 .padTimer {
-  padding-top: 10em;
+  padding-top: 12.5em;
 }
 
 .message {
@@ -43,6 +45,7 @@
   width: 100%;
   text-align: center;
   font-size: 3em;
+  line-height: 1em;
 }
 
 fieldset {
@@ -52,7 +55,7 @@ fieldset {
   -webkit-padding-start: 0.75em;
   -webkit-padding-end: 0.75em;
   -webkit-padding-after: 0.625em;
-  width: auto;
+  width: 100px;
 }
 
 label {
@@ -65,7 +68,7 @@ legend {
 }
 
 .timerBtns {
-  padding-top: 2em;
+  padding-top: 2.75em;
   width: 100%;
   text-align: center;
 }
@@ -86,9 +89,9 @@ legend {
 }
 
 body {
-  background-image: url(img/herotworooms.jpg);
+  background-image: url(../img/herotworooms.jpg);
   background-color: #5A0003;
-  background-position: center 0%;
+  background-position: center 72px;
   background-repeat: no-repeat;
   font-family: 'Rambla', sans-serif;
   color: white;
