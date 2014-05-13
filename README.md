@@ -1,11 +1,11 @@
 # Two Rooms and a Boom
 The party game that's always a blast.
 
-This application is currently hosted at `http://two-rooms.appspot.com` with mobile applications for Android and iOS coming soon.
+This application is currently hosted at [http://two-rooms.appspot.com](http://two-rooms.appspot.com) with mobile applications for Android and iOS coming soon.
 
 ## Getting Started
 
-This project, and the instructions that follow are based on `https://github.com/angular/angular-seed`.
+This project, and the instructions that follow are based on [https://github.com/angular/angular-seed](https://github.com/angular/angular-seed).
 
 To get you started you can simply clone the two-rooms repository and install the dependencies:
 
