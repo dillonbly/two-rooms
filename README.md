@@ -1,6 +1,9 @@
-# Two Rooms and a Boom - The party game that's always a blast
+# Two Rooms and a Boom
+The party game that's always a blast
 
 ## Getting Started
+
+This project, and the instructions that follow are based on `https://github.com/angular/angular-seed`.
 
 To get you started you can simply clone the two-rooms repository and install the dependencies:
 
@@ -14,10 +17,10 @@ its package manager (npm) installed.  You can get them from [http://nodejs.org/]
 
 ### Clone two-rooms
 
-Clone the two-rooms repository using [git][git]:
+Clone the two-rooms repository using [git]:
 
 ```
-git clone https://github.com/angular/two-rooms.git
+git clone https://github.com/dillonbly/two-rooms.git
 cd two-rooms
 ```
 
@@ -159,10 +162,6 @@ development server.
 
 
 ## Updating Angular
-
-Previously we recommended that you merge in changes to two-rooms into your own fork of the project.
-Now that the angular framework library code and tools are acquired through package managers (npm and
-bower) you can use these tools instead to update the dependencies.
 
 You can update the tool dependencies by running:
 
