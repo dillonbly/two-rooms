@@ -1,5 +1,7 @@
 # Two Rooms and a Boom
-The party game that's always a blast
+The party game that's always a blast.
+
+This application is currently hosted at `http://two-rooms.appspot.com` with mobile applications for Android and iOS coming soon.
 
 ## Getting Started
 
