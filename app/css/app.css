@@ -44,7 +44,7 @@
 .timer {
   width: 100%;
   text-align: center;
-  font-size: 3em;
+  font-size: 5em;
   line-height: 1em;
 }
 
@@ -68,7 +68,7 @@ legend {
 }
 
 .timerBtns {
-  padding-top: 2.75em;
+  padding-top: 6.25em;
   width: 100%;
   text-align: center;
 }
@@ -99,4 +99,17 @@ body {
 
 a {
   color: white;
+}
+
+
+@media only screen and (max-device-width: 480px) {
+
+  body {
+    background-size: 1100px;
+  }
+
+  .padTimer {
+    padding-top: 8.5em;
+  }
+ 
 }
