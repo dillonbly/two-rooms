@@ -3,7 +3,7 @@
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
+  margin-bottom: 0;
   padding: 0 0 0.5em;
   text-align: center;
   font-size: 1.5em;
@@ -31,21 +31,23 @@
   padding: 0;
 }
 
-.padTimer {
-  padding-top: 12.5em;
+.timerPanel {
+  background-image: url(../img/herotworooms.jpg);
+  background-position: center 0;
+  background-repeat: no-repeat;
+
+  padding-top: 246px;
+  height: 225px;
+  text-align: center;
 }
 
 .message {
-  width: 100%;
-  text-align: center;
   font-size: 2em;
 }
 
 .timer {
-  width: 100%;
-  text-align: center;
   font-size: 5em;
-  line-height: 1em;
+  line-height: 1.25em;
 }
 
 fieldset {
@@ -68,7 +70,6 @@ legend {
 }
 
 .timerBtns {
-  padding-top: 6.25em;
   width: 100%;
   text-align: center;
 }
@@ -89,10 +90,7 @@ legend {
 }
 
 body {
-  background-image: url(../img/herotworooms.jpg);
   background-color: #5A0003;
-  background-position: center 72px;
-  background-repeat: no-repeat;
   font-family: 'Rambla', sans-serif;
   color: white;
 }
@@ -101,15 +99,20 @@ a {
   color: white;
 }
 
-
 @media only screen and (max-device-width: 480px) {
 
-  body {
-    background-size: 1100px;
+  .message {
+    font-size: 1.5em;
   }
 
-  .padTimer {
-    padding-top: 8.5em;
+  .timer {
+    font-size: 3em;
   }
- 
+
+  .timerPanel {
+    background-size: 1100px;
+    padding-top: 183px;
+    height: 176px;
+  }
+
 }
