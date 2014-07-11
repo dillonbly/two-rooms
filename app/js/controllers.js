@@ -42,12 +42,10 @@ angular.module('myApp.controllers', [])
     updateRound();
 
     var timesUp = function() {
-      var bomb = document.getElementById("bomb");
-      bomb.load();
-      bomb.play();
       $scope.timeRemaining.seconds = 0;
       $scope.pause();
       $scope.roundOver = true;
+      playSound('bomb');
     };
 
     var countDown = function() {
@@ -65,9 +63,7 @@ angular.module('myApp.controllers', [])
     $scope.start = function() {
       $scope.started = true;
       stop = $interval(countDown, 1000);
-      var ticktock = document.getElementById("ticktock");
-      ticktock.load();
-      ticktock.play();
+      playSound('ticktock');
     };
     $scope.prev = function() {
       $scope.roundIndex -= 1;
@@ -81,4 +77,13 @@ angular.module('myApp.controllers', [])
   }])
   .controller('MenuCtrl', ['$scope', function($scope) {
 
-  }])
+  }]);
+
+function playSound(soundName) {
+  // Specify full path of web server to get sound working in Cordova/Android.
+  // Re-initialize the audio or else Chrome will not play it multiple times.
+  // TODO: get sound working with local assets on Android.
+  var sound = new Audio('http://two-rooms.appspot.com/sound/' + soundName + '.mp3');
+  sound.load();
+  sound.play();
+};
