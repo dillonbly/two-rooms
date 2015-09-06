@@ -49,11 +49,12 @@
 .timer {
   color: red;
   background-color: black;
-  font-family: Courier
-  font-size: 5em;
+  font-family: Courier;
+  font-size: 4em;
   line-height: 1.25em;
   margin: 0 auto;
   display: inline-block;
+  padding: 0 .1em;
 }
 
 fieldset {
